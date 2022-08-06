@@ -1,70 +1,37 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Covid tracker - India (React JS)
 
-## Available Scripts
+## Live demo: [https://main.ds4te5g1inz9b.amplifyapp.com/](https://main.ds4te5g1inz9b.amplifyapp.com/)
 
-In the project directory, you can run:
+### To run app in local
 
-### `npm start`
+####  Clone the project:  `git clone https://github.com/np-1998/covid-tacker.git`
+####  Install node_modules:  `npm install`
+#### Start application: `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+* From API data states has only state codes, so used static state names to map.
+    ref: https://www.zoho.com/in/books/kb/gst/valid-state-codes-list.html
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* States data (data.min.json) and Time series data (timeseries.min.json) has the data inconsistancy, where we cannot use both states data and timeseries for dates and sortby filters, so formatted both datas into one format and used based on filters. If user clicks date filter inside states page dates will be shown, if sortby or district selected district data will be shown in the table.
 
-### `npm run build`
+* Showed affected percentage and vaccinated percentange on states and districts for user to know while doing sortby.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* In districts data, some has not enough datas to handle percentage calculations for those cases shown - to inticate not enough data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Used Indexed DB storage to store the data & avoiding API call each time.
+    (local storage may run into memory exceed issue due to data size)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* persisted and reused users state vise filters using localstorage.
 
-### `npm run eject`
+* Used Redux for application level state management.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Used debouncing method to reduce frequent rendering while doing state search.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Splitted large components into small to reuse the functionality where ever needed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Used svg icons from https://fontawesome.com/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
