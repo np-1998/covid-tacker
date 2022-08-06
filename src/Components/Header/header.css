@@ -1,0 +1,21 @@
+.header-box {
+    /* padding: 5px; */
+    padding-left: 25px;
+    /* background-color: blue; */
+    border-bottom: 1px solid #c5c4c4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-text {
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.covid-icon {
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}

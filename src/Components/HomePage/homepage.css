@@ -1,0 +1,89 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* .grid::-webkit-scrollbar {
+    display: none;
+} */
+
+.grid-item {
+    width: auto;
+    height: auto;
+    padding: 5px;
+}
+
+.state-card {
+    margin: 2px;
+    border: 2px solid;
+    border-color: #dadada;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    transition: transform .1s;
+    cursor: pointer;
+    position: relative;
+}
+
+.state-card:hover {
+    transform: scale(1.015);
+    border-color: #61616163;
+}
+
+.card-title-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.percentage-icon {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.card-select-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tile-title {
+    display: flex;
+    justify-content: space-around;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    border-radius: 10px;
+    border: 1px solid #a09f9f38;
+    padding: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    border-radius: 10px;
+    border: 1px solid #a09f9f38;
+    padding: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.arrow-left:hover {
+    border: 1px solid #5d5d5d38;
+    background-color: #98989838;
+}
+
+.arrow-right:hover {
+    border: 1px solid #5d5d5d38;
+    background-color: #98989838;
+}
