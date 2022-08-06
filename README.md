@@ -3,15 +3,7 @@
 
 ## Live demo: [https://main.ds4te5g1inz9b.amplifyapp.com/](https://main.ds4te5g1inz9b.amplifyapp.com/)
 
-### To run app in local
-
-####  Clone the project:  `git clone https://github.com/np-1998/covid-tacker.git`
-####  Install node_modules:  `npm install`
-#### Start application: `npm run start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
+### NOTES:
 
 * From API data states has only state codes, so used static state names to map.
     ref: https://www.zoho.com/in/books/kb/gst/valid-state-codes-list.html
@@ -34,4 +26,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 * Splitted large components into small to reuse the functionality where ever needed.
 
 * Used svg icons from https://fontawesome.com/
+
+### To run app in local
+
+####  Clone the project:  `git clone https://github.com/np-1998/covid-tacker.git`
+####  Install node_modules:  `npm install`
+#### Start application: `npm run start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 
